@@ -28,8 +28,8 @@ AWAITING_URGENT_MSG, AWAITING_CONTACT_MSG = range(2)
 def get_main_keyboard():
     return ReplyKeyboardMarkup(
         [
-            [KeyboardButton("🧠 Что умеет бот?"), KeyboardButton("📞 Написать Таиру")],
-            [KeyboardButton("❗ Срочное сообщение"), KeyboardButton("❓ Помощь")]
+            [KeyboardButton("🧠 what can the bot do?"), KeyboardButton("📞 contact tair")],
+            [KeyboardButton("❗ urgent message"), KeyboardButton("❓ help")]
         ],
         resize_keyboard=True
     )
