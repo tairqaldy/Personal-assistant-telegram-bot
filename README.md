@@ -1,4 +1,4 @@
-# 🤖 Tair Telegram Assistant Bot
+# AI Personal Telegram Assistant Bot
 
 An intelligent Telegram bot assistant designed to communicate like Tair, answer questions, forward important or urgent messages, and help users with information. Built with `python-telegram-bot`, OpenAI GPT-4-turbo, and includes features like logging, moderation, and structured admin control.
 
@@ -125,6 +125,13 @@ GPT-4 integration powered by [OpenAI](https://platform.openai.com)
 Telegram bot built with [`python-telegram-bot`](https://github.com/python-telegram-bot/python-telegram-bot)
 
 ---
+
+## ⭐ If you find this useful...
+
+Feel free to leave a ⭐ star — and fork it if you want to build your own assistant bot!
+
+---
+
 
 ## 🪄 License
 
