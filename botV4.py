@@ -49,11 +49,12 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Ответ от OpenAI
 async def answer_with_ai(question: str) -> str:
     chat_completion = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": OWNER_PROMPT},
-            {"role": "user", "content": question}
-        ]
+    model="gpt-4-turbo",  # 👈 перешли с gpt-3.5-turbo
+    messages=[
+        {"role": "system", "content": OWNER_PROMPT},
+        {"role": "user", "content": question}
+    ],
+    max_tokens=2048  # можно увеличить до 2048+ при необходимости
     )
     return chat_completion.choices[0].message.content.strip()
 
@@ -115,7 +116,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Команда /contact
 async def contact_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "📞 Контакты Tair:\nTelegram: @tairqaldy\nEmail: taircaldy.yt@gmail.com\nТелефон: +77071677003",
+        "📞 Контакты Tair:\nTelegram: @tairqaldy\nEmail: taircaldy.yt@gmail.com\nТелефон: +7707...",
         reply_markup=get_main_keyboard()
     )
 

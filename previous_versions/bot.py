@@ -55,7 +55,7 @@ async def contact_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "📞 Контакты Tair:\n"
         "Telegram: @tairqaldy\n"
         "Email: taircaldy.yt@gmail.com\n"
-        "Телефон: +77071677003"
+        "Телефон: +7707..."
     )
     await update.message.reply_text(contact_info)
 
