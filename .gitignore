@@ -1,0 +1,48 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyt
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Environment files
+.env
+.env.*
+
+# Logs and data
+logs.csv
+*.log
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Backup or temporary files
+*.bak
+*.swp
+*.tmp
+
+# Output folders (optional)
+build/
+dist/
+*.egg-info/
+
+# Bytecode
+*.pyc
+
+# Jupyter or notebook autosaves
+.ipynb_checkpoints/
+
+# Precompiled OpenAI configs (if using)
+openai_cache/

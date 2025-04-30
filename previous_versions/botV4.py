@@ -146,6 +146,10 @@ async def book_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=get_main_keyboard()
     )
 
+async def get_chat_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    chat = update.effective_chat
+    await update.message.reply_text(f"Chat ID: `{chat.id}`", parse_mode="Markdown")
+
 # Запуск
 if __name__ == '__main__':
     app = ApplicationBuilder().token(BOT_TOKEN).build()
@@ -156,6 +160,9 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("services", services_command))
     app.add_handler(CommandHandler("book", book_command))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_handler(MessageHandler(filters.ALL & filters.ChatType.GROUPS, get_chat_id))
+
+
 
     print("✅ Tair Bot запущен")
     app.run_polling()
