@@ -1,4 +1,4 @@
-#Final Template for teleram AI assistant bot made by tairqaldy.
+#Final MVP Template for teleram AI assistant bot made by tairqaldy.
 import os
 import csv
 import datetime
